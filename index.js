@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-// const router = require('./router/main')(app);
+const router = require('./router/main')(app);
 
 app.listen(2000, '0.0.0.0', () => {
   console.log('Express server has started on port 2000');
