@@ -69,7 +69,7 @@ module.exports = {
       (callback) => {
         const query = `
           SELECT
-            ju_latitude AS latitude, ju_longitude AS longigude, ju_is_set_home AS isHomeSet, ju_address AS address
+            ju_latitude AS latitude, ju_longitude AS longitude, ju_is_set_home AS isHomeSet, ju_address AS address
           FROM
             jxh_user
           WHERE ju_username = '${requestedUserName}'`;
