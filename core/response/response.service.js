@@ -9,12 +9,14 @@ module.exports = {
       errorCode: responseObject.errorCode,
       errorMessage: responseObject.errorMessage
     });
+    response.end();
   },
-  responseBody: (response, responseObject) => {
+  responseBody: (response, responseObject, responseData) => {
     response.setHeader('Content-Type', 'application/json');
     response.status(responseObject.httpCode).json({
       result: IS_SUCCESS,
-      resultData: responseObject,
+      resultData: responseData,
     });
+    response.end();
   }
 };
