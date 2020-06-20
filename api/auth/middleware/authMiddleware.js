@@ -1,8 +1,10 @@
 const authService = require('../service/authService');
 const authConstants = require('../domain/authConstants');
+const responseService = require('../../../core/response/response.service');
 
 module.exports = (request, response, next) => {
   try {
+    const authKey = request.header['x-api-key'];
     const authState = authService.verifyToken(authConstants.TOKEN_TYPE.ACCESS_TOKEN, authKey);
     if (!authState.result) {
       if (authService.isTokenExpiredMessage(authState)) {
