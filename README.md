@@ -6,6 +6,10 @@
 
  [![Last Commit](https://img.shields.io/github/last-commit/stevejkang/junctionx-asia-2020-nodejs.svg)](https://github.com/stevejkang/junctionx-asia-2020-nodejs/commits)
 
+## License
+
+  MIT
+
 ## Author
 
   stevejkang <iam@juneyoung.io>
